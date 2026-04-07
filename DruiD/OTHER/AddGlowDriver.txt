@@ -1,0 +1,63 @@
+#$ TITLE: Remap a port to switch on/off a glow driver, similar to a buffer pack
+
+#$ FIRMWARE_VERSION: 4.4
+#$ FIRMWARE_VERSION: 4.5
+#$ FIRMWARE_VERSION: 4.6
+
+#$ BOARD_NAME: FLYDRAGON_PRO6000
+#$ BOARD_NAME: FLYDRAGON_PRO42688
+
+#$ CATEGORY: REMAPPING
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: aux, glow driver, remote glow, glow 
+#$ AUTHOR: DruiD MODIFIED\Testing of HANS capacitor script to learn
+#$ DESCRIPTION: Enables a port to use with a glow driver on a nitro, for NexusX\XR\Flydragon Pro
+#$ DESCRIPTION: You can choose which port you have connected the Glow Driver to, note Aux vs Channel
+#$ DESCRIPTION: choose the radio channel which you want to use to switch it on/off
+#$ PRIORITY: 0
+#$ FORCE_OPTIONS_REVIEW: TRUE
+
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Port
+    #$ OPTION BEGIN (UNCHECKED): Aux
+    resource FREQ 2 none
+    resource SERVO 5 B09
+    timer B09 AF3
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): TX2
+    resource SERIAL_TX 2 none
+    resource SERVO 5 A02
+    timer A02 AF3
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): RX2
+    resource SERIAL_RX 2 none
+    resource SERVO 5 A03
+    timer A03 AF3
+    #$ OPTION END
+#$ OPTION_GROUP END
+
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Input Channel
+    #$ OPTION BEGIN (UNCHECKED): AUX 2
+    mixer input AUX2 -1000 1000 1000
+    mixer rule 10 set AUX2 S5 1000 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): AUX 3
+    mixer input AUX3 -1000 1000 1000
+    mixer rule 10 set AUX3 S5 1000 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Channel 9
+    mixer input CH9 -1000 1000 1000
+    mixer rule 10 set CH9 S5 1000 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Channel 10
+    mixer input CH10 -1000 1000 1000
+    mixer rule 10 set CH10 S5 1000 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Channel 11
+    mixer input CH11 -1000 1000 1000
+    mixer rule 10 set CH11 S5 1000 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Channel 12
+    mixer input CH12 -1000 1000 1000
+    mixer rule 10 set CH12 S5 1000 0
+    #$ OPTION END
+#$ OPTION_GROUP END

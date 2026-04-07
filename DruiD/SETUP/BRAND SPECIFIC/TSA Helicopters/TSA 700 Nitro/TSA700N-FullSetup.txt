@@ -1,0 +1,15 @@
+#$ TITLE: Setup a TSA 700 Nitro, Glow driver, arming, Gov and 6G 
+#$ FIRMWARE_VERSION: 4.5
+#$ FIRMWARE_VERSION: 4.6
+#$ BOARD_NAME: FLYDRAGON_PRO6000
+#$ BOARD_NAME: FLYDRAGON_PRO42688
+#$ CATEGORY: SETUP
+#$ STATUS: EXPERIMENTAL
+#$ KEYWORDS: tsa 700, nitro, glow, gov, 6g
+#$ AUTHOR: DruiD 
+#$ DESCRIPTION: Set the basic settings for out of the box electronic setup for a TSA 700 Nitro
+#$ DESCRIPTION: Currently out of scope is PIDs and tuning
+#$ DESCRIPTION: Setup includes
+#$ DESCRIPTION: 4th Servo for throttle for Glow driver PWM control, Pids\Rates switching, Arming, 6G stablisation modes 
+#$ PRIORITY: 0
+#$ FORCE_OPTIONS_REVIEW: TRUE
