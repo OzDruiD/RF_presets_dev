@@ -1,0 +1,18 @@
+{
+	"name" : "firmware-presets by DruiD",
+	"productName" : "Rotorflight Firmware Presets by DruiD",
+	"description" : "Collection of CLI-based presets by DruiD",
+	"scripts" : {
+		"index" : "node indexer/indexer.js",
+		"verify" : "node indexer/check.js"
+	},
+	"repository" : {
+		"type" : "git",
+		"url" : "github.com/OzDruiD/RF_presets_dev"
+	},
+	"author" : "DruiD",
+	"license" : "GPL-3.0",
+	"engines" : {
+		"node" : ">=10.x"
+	}
+}

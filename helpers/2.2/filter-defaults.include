@@ -1,0 +1,38 @@
+#$ OPTION_GROUP BEGIN: Reset Filters
+    #$ OPTION BEGIN (CHECKED): Lowpass
+    set gyro_lpf1_type = FIRST_ORDER
+    set gyro_lpf1_static_hz = 100
+    set gyro_lpf1_dyn_min_hz = 0
+    set gyro_lpf1_dyn_max_hz = 0
+    set gyro_lpf2_type = NONE
+    set gyro_lpf2_static_hz = 50
+    #$ OPTION END
+    #$ OPTION BEGIN (CHECKED): Notch
+    set gyro_notch1_hz = 0
+    set gyro_notch1_cutoff = 0
+    set gyro_notch2_hz = 0
+    set gyro_notch2_cutoff = 0
+    #$ OPTION END
+    #$ OPTION BEGIN (CHECKED): Dynamic
+    feature DYN_NOTCH
+    set dyn_notch_count = 6
+    set dyn_notch_q = 25
+    set dyn_notch_min_hz = 20
+    set dyn_notch_max_hz = 240
+    #$ OPTION END
+    #$ OPTION BEGIN (CHECKED): RPM
+    feature -RPM_FILTER
+    set gyro_rpm_notch_preset = 2
+    set gyro_rpm_notch_min_hz = 20
+    set gyro_rpm_notch_source_pitch = 11,12,13,14,21,22,0,0,0,0,0,0,0,0,0,0
+    set gyro_rpm_notch_center_pitch = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    set gyro_rpm_notch_q_pitch = 80,30,80,60,60,50,0,0,0,0,0,0,0,0,0,0
+    set gyro_rpm_notch_source_roll = 11,12,13,14,21,22,0,0,0,0,0,0,0,0,0,0
+    set gyro_rpm_notch_center_roll = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    set gyro_rpm_notch_q_roll = 80,30,80,60,60,50,0,0,0,0,0,0,0,0,0,0
+    set gyro_rpm_notch_source_yaw = 11,12,13,14,21,22,0,0,0,0,0,0,0,0,0,0
+    set gyro_rpm_notch_center_yaw = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    set gyro_rpm_notch_q_yaw = 80,40,80,80,60,50,0,0,0,0,0,0,0,0,0,0
+    #$ OPTION END
+#$ OPTION_GROUP END
+# End Filter Resets (if any are selected)
